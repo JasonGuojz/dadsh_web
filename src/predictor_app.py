@@ -19,7 +19,7 @@ from flask import request, jsonify
 from torch.autograd import Variable
 from torchvision import transforms
 
-from net import AlexNetPlusLatent
+from src.net import AlexNetPlusLatent
 
 with open("./src/config.yaml", 'r') as stream:
 	APP_CONFIG = yaml.full_load(stream)
