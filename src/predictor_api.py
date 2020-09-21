@@ -12,7 +12,7 @@ import torch.optim.lr_scheduler
 from torch.autograd import Variable
 from torchvision import transforms
 
-from net import AlexNetPlusLatent
+from src.net import AlexNetPlusLatent
 
 model = None
 bits = None
