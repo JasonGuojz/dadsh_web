@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Start the server
-CMD ["gunicorn", "src.predictor_app:app","-c","./gunicorn.conf.py","-t","50"]
+CMD ["gunicorn", "src.predictor_app:app","-c","./gunicorn.conf.py"]
 
