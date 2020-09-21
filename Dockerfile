@@ -14,3 +14,4 @@ COPY . .
 
 # Start the server
 CMD ["gunicorn", "src.predictor_app:app","-c","./gunicorn.conf.py","-t","50"]
+
