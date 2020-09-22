@@ -13,12 +13,10 @@ import requests
 import yaml
 import numpy as np
 import torch.optim.lr_scheduler
-
 from PIL import Image
 from flask import request, jsonify
 from torch.autograd import Variable
 from torchvision import transforms
-
 from src.net import AlexNetPlusLatent
 
 with open("./src/config.yaml", 'r') as stream:
@@ -28,6 +26,7 @@ app = flask.Flask(__name__)
 model = None
 bits = None
 imgrecord = []
+
 
 def load_model():
 	# load the pre-trained Keras model (here we are using a model
@@ -129,7 +128,7 @@ def index_page():  # flask库要求'web_page.html'必须在templates文件夹下
 def upload_file():
 	if flask.request.method == 'GET':
 		url = flask.request.args.get("url")
-		response = requests.get(url)
+		response = requests.get(url, verify=False)
 		img = Image.open(io.BytesIO(response.content))
 	else:
 		img_bytes = request.files['file'].read()
