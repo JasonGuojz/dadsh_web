@@ -24,12 +24,12 @@ code:
 
 sampleImages:
   - name: frog
-    url: https://srtp-dadsh-image.oss-cn-shanghai.aliyuncs.com/images/1.jpg
+    url: https://dadsh-cifar10.oss-cn-shenzhen-internal.aliyuncs.com/images/1.jpg
   - name: dog
-    url: https://srtp-dadsh-image.oss-cn-shanghai.aliyuncs.com/images/10000.jpg
+    url: https://dadsh-cifar10.oss-cn-shenzhen-internal.aliyuncs.com/images/10000.jpg
   - name: ship
-    url: https://srtp-dadsh-image.oss-cn-shanghai.aliyuncs.com/images/20001.jpg
+    url: https://dadsh-cifar10.oss-cn-shenzhen-internal.aliyuncs.com/images/20001.jpg
   - name: truck
-    url: https://srtp-dadsh-image.oss-cn-shanghai.aliyuncs.com/images/2.jpg
+    url: https://dadsh-cifar10.oss-cn-shenzhen-internal.aliyuncs.com/images/2.jpg
   - name: deer
-    url: https://srtp-dadsh-image.oss-cn-shanghai.aliyuncs.com/images/4000.jpg
+    url: https://dadsh-cifar10.oss-cn-shenzhen-internal.aliyuncs.com/images/4000.jpg

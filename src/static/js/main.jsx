@@ -32,7 +32,7 @@ const axios = window.axios;
 
 const Select = window.Select;
 
-const head = "https://dadsh-cifar10.oss-cn-shenzhen.aliyuncs.com";
+const head = "https://dadsh-cifar10.oss-cn-shenzhen-internal.aliyuncs.com";
 
 
 class About extends React.Component {
