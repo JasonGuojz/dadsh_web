@@ -23,36 +23,22 @@ with open("./src/config.yaml", 'r') as stream:
 	APP_CONFIG = yaml.full_load(stream)
 
 app = flask.Flask(__name__)
-model = None
+
+# load the pre-trained model (here we are using a model
+# pre-trained on cifar-10
+model = AlexNetPlusLatent(48)
+model.load_state_dict(torch.load('./model/90.42'))
+
+# Load the bits doc
 bits = None
 imgrecord = []
-
-
-def load_model():
-	# load the pre-trained Keras model (here we are using a model
-	# pre-trained on ImageNet and provided by Keras, but you can
-	# substitute in your own networks just as easily)
-	global model
-	# 48bit
-	model = AlexNetPlusLatent(48)
-	model.load_state_dict(torch.load('./model/90.42'))
-
-
-def load_bitdoc():
-	"""
-	# Load the bits doc
-	"""
-	global bits
-	global imgrecord
-
-	if os.path.exists("./code/bits.npy") and os.path.exists("./code/imgrecord.txt"):
-		bits = np.load("./code/bits.npy")
-	imgrecord = []
-	with open('./code/imgrecord.txt', 'r') as f:
-		for line in f:
-			# result = line.strip('\n').split(',')
-			# imgrecord.append(list(result[0]))
-			imgrecord.append(list(line.strip('\n').split(',')))
+if os.path.exists("./code/bits.npy") and os.path.exists("./code/imgrecord.txt"):
+	bits = np.load("./code/bits.npy")
+with open('./code/imgrecord.txt', 'r') as f:
+	for line in f:
+		# result = line.strip('\n').split(',')
+		# imgrecord.append(list(result[0]))
+		imgrecord.append(list(line.strip('\n').split(',')))
 
 
 def binary_output(query, bit_num=48):
@@ -146,6 +132,4 @@ if __name__ == '__main__':
 	# 设置开启web服务后，如果更新html文件，可以使更新立即生效
 	app.jinja_env.auto_reload = True
 	app.config['TEMPLATES_AUTO_RELOAD'] = True
-	load_model()
-	load_bitdoc()
 	app.run()  # use your local IPv4 address to replace 0.0.0.0

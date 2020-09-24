@@ -6,21 +6,11 @@ about:
   This is a Image Retreival System baseed on Deep Hashing built on top of Pytorch.
 
 
-  The project was build by []()
-  and []().
+  The project was build by [Guo jiazhen](https://jasonguojz.github.io/)
+  and Si yuxuan, Shen shuoyan
 
 
-  More info and the source code can he found below.
-
-
-  - [Blog]()
-
-  - [Web app]()
-
-  - [Video]()
-
-
-code:
+code: https://github.com/JasonGuojz/dadsh_web
 
 sampleImages:
   - name: frog

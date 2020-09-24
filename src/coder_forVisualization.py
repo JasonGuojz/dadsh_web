@@ -1,7 +1,7 @@
 import os
 import argparse
 import numpy as np
-from net import AlexNetPlusLatent
+from src.net import AlexNetPlusLatent
 import torch
 from torchvision import datasets, transforms
 from torch.autograd import Variable
