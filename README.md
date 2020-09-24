@@ -6,10 +6,10 @@ $  docker build github.com/JasonGuojz/dadsh_web -t dadsh:{tag}
 $  sudo fuser -k 80/tcp  
 $  sudo docker run -d -p 80:80 --name dadsh_test dadsh:{tag}
 
-OR 
-$  git lfs clone https://github.com/JasonGuojz/dadsh_web.git
-$  cd dadsh_web
-$  docker build -t dadsh:{tag} .
+OR  
+$  git lfs clone https://github.com/JasonGuojz/dadsh_web.git  
+$  cd dadsh_web  
+$  docker build -t dadsh:{tag} .  
 $  sudo fuser -k 80/tcp  
 $  sudo docker run -d -p 80:80 --name test-dadsh-1 dadsh:{tag}
 
