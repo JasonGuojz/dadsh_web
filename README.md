@@ -1,5 +1,6 @@
 # dadsh_web
-a image retrieval web application based on the deep CNN mode(we called it dadsh: double-bit asymmetric deep supervised hashing 
+An image retrieval web application based on the deep CNN model(we called it dadsh: double-bit asymmetric deep supervised hashing 
+Using PyTorch+Flask+Gunicorn+Docker
 
 ## how to start up
 $  docker build github.com/JasonGuojz/dadsh_web -t dadsh:{tag}  
